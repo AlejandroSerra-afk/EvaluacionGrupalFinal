@@ -195,7 +195,7 @@ buscarProfesor1 = function () {
         if (elementoPersona.nombre == buscarProfe) {
             alert("Profesor " + buscarProfe + " Encontrado")
         } else {
-            alert("Profesro No Encontrado")
+            alert("Profesor No Encontrado")
         }
     }
 }
