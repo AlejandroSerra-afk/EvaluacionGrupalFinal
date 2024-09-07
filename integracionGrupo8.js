@@ -56,7 +56,6 @@ buscarEstudiante = function () {
 }
 
 
-
 //Aulas
 
 let aulas = [];
@@ -263,45 +262,31 @@ buscarProfesor2 = function () {
     return profesorEncontrado;
 
 }
-
-mostrarComponente = function(idComponente){
-    document.getElementById(idComponente).style.display = "block";
-}
   
-ocultarComponente = function(idComponente){
-    document.getElementById(idComponente).style.display = "none";
-}
-  
-mostrarOpcionAula = function () {
+  mostrarOpcionAula = function () {
     ocultarComponente("divEstudiantes");
     mostrarComponente("divAulas");
     ocultarComponente("divProfesor1");
     ocultarComponente("divProfesor2");
-}
+  }
   
-mostrarOpcionEstudiantes = function () {
-    ocultarComponente("divAula");
+  mostrarOpcionEstudiantes = function () {
+    ocultarComponente("divAulas");
     mostrarComponente("divEstudiantes");
     ocultarComponente("divProfesor1");
     ocultarComponente("divProfesor2");
-}
+  }
   
-mostrarOpcionProfesor1 = function () {
-    ocultarComponente("divAula");
+  mostrarOpcionProfesor1 = function () {
+    ocultarComponente("divAulas");
     mostrarComponente("divProfesor1");
     ocultarComponente("divEstudiantes");
     ocultarComponente("divProfesor2");
-}
+  }
   
-mostrarOpcionProfesor2 = function () {
-    ocultarComponente("divAula");
+  mostrarOpcionProfesor2 = function () {
+    ocultarComponente("divAulas");
     mostrarComponente("divProfesor2");
     ocultarComponente("divEstudiantes");
     ocultarComponente("divProfesor1");
-}
-
-recuperarTexto = function (idComponente) {
-    let componente = document.getElementById(idComponente);
-    let valorIngresado = componente.value;
-    return valorIngresado;
-}
+  }

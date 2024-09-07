@@ -3,6 +3,7 @@
 
 <head>
     <script src="integracionGrupo8.js"></script>
+    <script src="utilitarios.js"></script>
     <link rel="stylesheet" href="intrgracionGrupo8.css">
 </head>
 
@@ -51,9 +52,6 @@
                     <div id="tablaEstudiantes">
         
                     </div>
-                    <div>
-                        <img src="logoKrakeDev.png" width="300px"/>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -64,7 +62,7 @@
                 <div class="principal">
                     <div class="secun">
                         <p>
-                        <h1>Nombre</h1>
+                        <h2>Nombre</h2>
                         <input type="text" id="txtNombre1">
                         <h2>Edad</h2>
                         <input type="text" id="txtEdad1">
@@ -86,8 +84,6 @@
                 <input type="button" value="Buscar" onclick="buscarProfesor1();" class="estiloBoton">
             </div>
         </div>
-
-
         <div id="divProfesor2">
             <h1 class="tittle">Buscar Profesor</h1>
             <input type="text" id="buscarProfesor">
@@ -105,7 +101,34 @@
             <div id="tablaProfesores"></div>
         </div>
         <div id="divAulas">
-
+            <div class="principal">
+                <div class="contenido">
+                    <div class="datos">
+                        <h3>NUMERO DE AULA</h3>
+                        <input type="text" class="cajaTexto" id="txtNumeroAula"/>
+                        <h3>HORARIO</h3>
+                        <input type="text" class="cajaTexto" id="txtHorario"/>
+                        <h3>CAPACIDAD MAXIMA</h3>
+                        <input type="text" class="cajaTexto" id="txtCapacidadMaxima"/>
+                    </div>
+                    <div>
+                        <input type="button" class="boton" value="GUARADAR" onclick="agregarAula();">
+                        <input type="button" class="boton" value="REFRESCAR" onclick="refrescar();">
+                    </div>
+                </div>
+                <div class="resumen">
+                    TABLA
+                    <div id="tabla">
+                        
+                    </div>
+                    <div>
+                        <h3>BUSCAR</h3>
+                        <input type="text" class="cajaTexto" id="txtBuscar" >
+                        <input type="button" class="boton" value="BUSCAR" onclick="ejecutarBusqueda();">      
+                    </div>
+                </div> 
+            </div>
+            
         </div>
     </div>
 </body>
