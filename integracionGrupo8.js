@@ -1,63 +1,63 @@
 //Estudiantes
 
-let estudiantes=[];
+let estudiantes = [];
 
-crearEstudiante=function(){
-    let nombre=recuperarTexto("txtNombre");
-    let curso =recuperarTexto("txtCurso");
-    let matriculaR=recuperarTexto("txtMatricula");
-    let estudiante={};
-    estudiante.nombre=nombre;
-    estudiante.curso=curso;
-    estudiante.matricula=matriculaR;
+crearEstudiante = function () {
+    let nombre = recuperarTexto("txtNombre");
+    let curso = recuperarTexto("txtCurso");
+    let matriculaR = recuperarTexto("txtMatricula");
+    let estudiante = {};
+    estudiante.nombre = nombre;
+    estudiante.curso = curso;
+    estudiante.matricula = matriculaR;
     return estudiante
 }
 
-agregarEstudiante=function(){
-    estudianteCreado=crearEstudiante();
+agregarEstudiante = function () {
+    estudianteCreado = crearEstudiante();
     estudiantes.push(estudianteCreado);
     console.log(estudiantes);
     refrescarEstudiante();
 }
 
-refrescarEstudiante=function(){
-    let cmpTabla=document.getElementById("tablaEstudiantes");
-    let contenidoTabla="<table><tr>"+
-    "<th>NOMBRE</th>"+
-    "<th>CURSO</th>"+
-    "<th>MATRICULAS</th>"+
-    "</tr>";
+refrescarEstudiante = function () {
+    let cmpTabla = document.getElementById("tablaEstudiantes");
+    let contenidoTabla = "<table><tr>" +
+        "<th>NOMBRE</th>" +
+        "<th>CURSO</th>" +
+        "<th>MATRICULAS</th>" +
+        "</tr>";
     let elementoEstudiante;
-    for (let i=0;i<estudiantes.length;i++){
-        elementoEstudiante=estudiantes[i];
-        contenidoTabla+="<tr><td>"+elementoEstudiante.nombre+"</td>"+
-        "<td>"+elementoEstudiante.curso+"</td>"+
-        "<td>"+elementoEstudiante.matricula+"</td>"+
-        "</tr>"
+    for (let i = 0; i < estudiantes.length; i++) {
+        elementoEstudiante = estudiantes[i];
+        contenidoTabla += "<tr><td>" + elementoEstudiante.nombre + "</td>" +
+            "<td>" + elementoEstudiante.curso + "</td>" +
+            "<td>" + elementoEstudiante.matricula + "</td>" +
+            "</tr>"
     }
-    contenidoTabla+="</table>"
-    cmpTabla.innerHTML=contenidoTabla
+    contenidoTabla += "</table>"
+    cmpTabla.innerHTML = contenidoTabla
 }
-buscarEstudiante=function(){
+buscarEstudiante = function () {
     let estudianteIterado;
-    let estudianteEncontrado=false;
-    let nombre=recuperarTexto("txtIdentificador");
-    for(let i=0;i<estudiantes.length;i++){
-        estudianteIterado=estudiantes[i];
-        if (estudianteIterado.nombre==nombre){
-            estudianteEncontrado=true
+    let estudianteEncontrado = false;
+    let nombre = recuperarTexto("txtIdentificador");
+    for (let i = 0; i < estudiantes.length; i++) {
+        estudianteIterado = estudiantes[i];
+        if (estudianteIterado.nombre == nombre) {
+            estudianteEncontrado = true
         }
     }
-    if(estudianteEncontrado==true){
+    if (estudianteEncontrado == true) {
         alert("ESTUDIANTE ENCONTRADO");
-    }else{
+    } else {
         alert("ESTUDIANTE NO ENCONTRADO");
     }
 }
 
-recuperarTexto=function(idComponente){
-    let componente=document.getElementById(idComponente);
-    let valorIngresado=componente.value;
+recuperarTexto = function (idComponente) {
+    let componente = document.getElementById(idComponente);
+    let valorIngresado = componente.value;
     return valorIngresado;
 }
 
@@ -138,3 +138,64 @@ buscarAula = function () {
         alert("Aula no Encontrada")
     }
 }
+// Profesor1
+
+let profesores1 = []
+
+crearProfesor1 = function () {
+    let nombre = recuperarTexto("txtNombre");
+    let edad = recuperarTexto("txtEdad");
+    let email = recuperarTexto("txtEmail");
+
+    let profesor = { nombre, edad, email }
+
+    return profesor
+
+}
+
+agregarProfesor1 = function () {
+
+    let profesor1 = crearProfesor1();
+
+    profesores1.push(profesor1);
+
+    console.log(profesores1);
+}
+
+refrescarProfesor1 = function () {
+    let guardar
+    let contenidoTabla = "<table><tr>" +
+        "<th>NOMBRE</th>" +
+        "<th>EDAD</th>" +
+        "<th>EMAIL</th>" +
+        "</tr>"
+
+    for (let i = 0; i < profesores1.length; i++) {
+        guardar = profesores1[i]
+        contenidoTabla += "<tr>" +
+            "<td>" + guardar.nombre + "</td>" +
+            "<td>" + guardar.edad + "</td>" +
+            "<td>" + guardar.email + "</td>" +
+            "</tr>"
+    }
+    contenidoTabla += "</table>"
+    cmpTabla = document.getElementById("Tabla")
+    cmpTabla.innerHTML = contenidoTabla
+}
+
+buscarProfesor1 = function () {
+    let buscarProfe = recuperarTexto("txtBuscar")
+
+    let elementoPersona
+
+    for (let i = 0; i < profesores1.length; i++) {
+        elementoPersona = profesores1[i]
+
+
+        if (elementoPersona.nombre == buscarProfe) {
+            alert("Profesor " + buscarProfe + " Encontrado")
+        } else {
+            alert("Profesro No Encontrado")
+        }
+    }
+} 
