@@ -179,7 +179,7 @@ refrescarProfesor1 = function () {
 }
 
 buscarProfesor1 = function () {
-    let buscarProfe = recuperarTexto("txtBuscar")
+    let buscarProfe = recuperarTexto("txtBuscar1")
 
     let elementoPersona
 
@@ -199,7 +199,7 @@ buscarProfesor1 = function () {
 let profesores2 = []
 
 crearProfesor2 = function () {
-    let valorNombre = recuperarTexto("txtNombre")
+    let valorNombre = recuperarTexto("txtNombre2")
     let valorEdad = recuperarTexto("txtEdad")
     let valorEmail = recuperarTexto("txtEmail")
 
