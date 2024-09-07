@@ -1,3 +1,5 @@
+//Estudiantes
+
 let estudiantes=[];
 
 crearEstudiante=function(){
@@ -53,9 +55,86 @@ buscarEstudiante=function(){
     }
 }
 
-
 recuperarTexto=function(idComponente){
     let componente=document.getElementById(idComponente);
     let valorIngresado=componente.value;
     return valorIngresado;
+}
+
+//Aulas
+
+let aulas = [];
+
+crearAula = function () {
+    let aula = {};
+    let numeroAulaC;
+    let horarioC;
+    let capacidadMaximaC;
+
+    let componenteNumeroAula = document.getElementById("txtNumeroAula");
+    let componenteHorario = document.getElementById("txtHorario");
+    let componenteCapacidad = document.getElementById("txtCapacidadMaxima");
+    numeroAulaC = componenteNumeroAula.value;
+    horarioC = componenteHorario.value;
+    capacidadMaximaC = componenteCapacidad.value;
+
+    aula.numeroAula = numeroAulaC;
+    aula.horario = horarioC;
+    aula.capacidadMaxima = capacidadMaximaC;
+
+    return aula;
+}
+
+agregarAula = function () {
+    let aulaC = crearAula();
+    aulas.push(aulaC);
+    let elementoAula
+    for (let i = 0; i < aulas.length; i++) {
+        elementoAula = aulas[i];
+        console.log(elementoAula.numeroAula);
+        console.log(elementoAula.horario);
+        console.log(elementoAula.capacidadMaxima);
+    }
+
+}
+
+refrescar = function () {
+    let cmpTabla = document.getElementById("tabla");
+    let tabla = "<table>"
+        + "<tr>"
+        + "<th>NUMERO AULA</th>"
+        + "<th>HORARIO</th>"
+        + "<th>CAPACIDAD</th>"
+        + "</tr>"
+    let elementoAula;
+    for (let i = 0; i < aulas.length; i++) {
+        elementoAula = aulas[i];
+        tabla +=
+            "<tr>"
+            + "<td>" + elementoAula.numeroAula + "</td>"
+            + "<td>" + elementoAula.horario + "</td>"
+            + "<td>" + elementoAula.capacidadMaxima + "</td>"
+        "</tr>"
+    }
+    tabla += "</table>"
+    cmpTabla.innerHTML = tabla;
+}
+
+buscarAula = function () {
+    let componenteBuscar = document.getElementById("txtBuscar");
+    let numAula = componenteBuscar.value;
+    let elementoAula;
+    let aulaEncontrada = null;
+    for (let i = 0; i < aulas.length; i++) {
+        elementoAula = aulas[i];
+        if (numAula == elementoAula.numeroAula) {
+            aulaEncontrada = elementoAula;
+            break;
+        }
+    }
+    if (aulaEncontrada != null) {
+        alert("Aula Encontrada");
+    } else {
+        alert("Aula no Encontrada")
+    }
 }
