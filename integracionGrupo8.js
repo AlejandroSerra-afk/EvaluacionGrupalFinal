@@ -198,4 +198,73 @@ buscarProfesor1 = function () {
             alert("Profesro No Encontrado")
         }
     }
-} 
+}
+
+// Profesor2
+let profesores2 = []
+
+crearProfesor2 = function () {
+    let valorNombre = recuperarTexto("txtNombre")
+    let valorEdad = recuperarTexto("txtEdad")
+    let valorEmail = recuperarTexto("txtEmail")
+
+    let profesor = {}
+
+    profesor.valorNombre = valorNombre
+    profesor.valorEdad = valorEdad
+    profesor.valorEmail = valorEmail
+
+    return profesor
+}
+
+agregarProfesor2 = function (profesor) {
+    let nuevoProfesor = crearProfesor2(profesor)
+
+    profesores2.push(nuevoProfesor)
+
+}
+
+refrescarProfesor2 = function () {
+    let cmpTabla = document.getElementById("tablaProfesores");
+    let contenidoTabla =
+        "<table><tr>" +
+        "<th>Nombre</th>" +
+        "<th>Edad</th>" +
+        "<th>Email</th>" +
+        "</tr>";
+    let elementoProfesor;
+
+    for (let i = 0; i < profesores2.length; i++) {
+        elementoProfesor = profesores2[i];
+        contenidoTabla +=
+            "<tr><td>" +
+            elementoProfesor.valorNombre +
+            "</td>" +
+            "<td>" +
+            elementoProfesor.valorEdad +
+            "</td>" +
+            "<td>" +
+            elementoProfesor.valorEmail +
+            "</td>" +
+            "</tr>";
+    }
+
+    contenidoTabla += "</table>";
+    cmpTabla.innerHTML = contenidoTabla;
+}
+
+buscarProfesor2 = function () {
+    let profesorBusqueda = recuperarTexto("buscarProfesor");
+
+    for (let i = 0; i < profesores2.length; i++) {
+        profesorEncontrado = profesores2[i]
+        if (profesorEncontrado.valorNombre == profesorBusqueda) {
+            return alert("Profesor Encontrado")
+        } else {
+            return alert("Profesor no encontrado")
+        }
+    }
+    return profesorEncontrado;
+
+}
+
