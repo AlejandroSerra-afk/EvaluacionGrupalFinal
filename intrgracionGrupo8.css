@@ -16,3 +16,43 @@ body{
     display: flex;
     flex-direction: column;
 }
+.imagen{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+
+}
+tbody tr:nth-child(odd){
+    background-color: white;
+}
+tbody tr:nth-child(even){
+    background-color: rgb(187, 187, 187);
+}
+table{
+    background-color: black;
+}
+.boton{
+    background-color: rgb(97, 97, 97);
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    border: 1px;
+    border-color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.ingresoDatos{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.mostrado{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tabla{
+    margin-left: 30px;
+}
+.contenido1{
+    margin-left: 20px;
+}
