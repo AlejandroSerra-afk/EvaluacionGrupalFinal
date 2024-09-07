@@ -143,9 +143,9 @@ buscarAula = function () {
 let profesores1 = []
 
 crearProfesor1 = function () {
-    let nombre = recuperarTexto("txtNombre");
-    let edad = recuperarTexto("txtEdad");
-    let email = recuperarTexto("txtEmail");
+    let nombre = recuperarTexto("txtNombre1");
+    let edad = recuperarTexto("txtEdad1");
+    let email = recuperarTexto("txtEmail1");
 
     let profesor = { nombre, edad, email }
 
@@ -195,7 +195,7 @@ buscarProfesor1 = function () {
         if (elementoPersona.nombre == buscarProfe) {
             alert("Profesor " + buscarProfe + " Encontrado")
         } else {
-            alert("Profesro No Encontrado")
+            alert("Profesor No Encontrado")
         }
     }
 }
