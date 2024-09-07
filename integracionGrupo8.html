@@ -14,9 +14,9 @@
                 <img src="Gato.png" width="200px">
             </div>
             <div class="botones">
-                <input type="button" value="ESTUDIANTES" />
-                <input type="button" value="AULAS" />
-                <input type="button" value="PROFESORES1" />
+                <input type="button" value="ESTUDIANTES" onclick="mostrarOpcionEstudiantes();"/>
+                <input type="button" value="AULAS" onclick="mostrarOpcionAula();"/>
+                <input type="button" value="PROFESORES1" onclick="mostrarOpcionProfesor1();"/>
                 <input type="button" value="PROFESORES2" onclick="mostrarOpcionProfesor2();" />
             </div>
         </div>
@@ -112,7 +112,7 @@
                         <input type="text" class="cajaTexto" id="txtCapacidadMaxima"/>
                     </div>
                     <div>
-                        <input type="button" class="boton" value="GUARADAR" onclick="agregarAula();">
+                        <input type="button" class="boton" value="GUARDAR" onclick="agregarAula();">
                         <input type="button" class="boton" value="REFRESCAR" onclick="refrescar();">
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                     <div>
                         <h3>BUSCAR</h3>
                         <input type="text" class="cajaTexto" id="txtBuscar" >
-                        <input type="button" class="boton" value="BUSCAR" onclick="ejecutarBusqueda();">      
+                        <input type="button" class="boton" value="BUSCAR" onclick="buscarAula();">      
                     </div>
                 </div> 
             </div>
