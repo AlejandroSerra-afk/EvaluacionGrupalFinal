@@ -204,7 +204,7 @@ buscarProfesor1 = function () {
 let profesores2 = []
 
 crearProfesor2 = function () {
-    let valorNombre = recuperarTexto("txtNombre")
+    let valorNombre = recuperarTexto("txtNombre2")
     let valorEdad = recuperarTexto("txtEdad")
     let valorEmail = recuperarTexto("txtEmail")
 
