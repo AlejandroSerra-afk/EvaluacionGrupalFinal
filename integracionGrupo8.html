@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="integracionGrupo8.js"></script>
+</head>
+
+<body>
+    <div class="principal">
+        <div class="menu">
+            <div class="imagen">
+                <img src="Gato.png" width="200px">
+            </div>
+            <div>
+                <input type="button" value="ESTUDIANTES" />
+                <input type="button" value="AULAS" />
+                <input type="button" value="PROFESORES" />
+            </div>
+        </div>
+        <div id="divEstudiantes">
+
+        </div>
+        <div id="divProfesor1">
+
+        </div>
+        <div id="divProfesor2">
+            <h1 class="tittle">Buscar Profesor</h1>
+            <input type="text" id="buscarProfesor">
+            <input class="boton" type="button" value="Buscar Profesor" onclick="buscarProfesor2()">
+
+            <h1 class="tittle">Nombre</h1>
+            <input type="text" id="txtNombre">
+            <h1 class="tittle">Edad</h1>
+            <input type="number" id="txtEdad">
+            <h1 class="tittle">Email</h1>
+            <input type="email" id="txtEmail">
+            <input class="boton" type="button" value="GUARDAR" onclick="agregarProfesor2()">
+            <input class="boton" type="button" value="REFRESCAR" onclick="refrescarProfesor2()">
+
+            <div id="tablaProfesores"></div>
+        </div>
+        <div id="divAulas">
+
+        </div>
+    </div>
+</body>
+
+</html>
